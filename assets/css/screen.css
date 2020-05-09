@@ -51,7 +51,7 @@ html,
 }
 
 .gh-postfeed {
-    padding: 8vmin 0;
+    padding: 6vmin 0;
 }
 
 .gh-container {
@@ -163,8 +163,13 @@ html,
 /* ---------------------------------------------------------- */
 
 .gh-header {
-    padding: 0 0 8vmin 0;
-    text-align: center;
+    padding: 0 0 4vmin 0;
+    text-align: left;
+}
+
+.gh-title a {
+    color: color(var(--color-base) l(+20%));
+    text-decoration: none;
 }
 
 .gh-post-meta {

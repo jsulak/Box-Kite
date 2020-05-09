@@ -4,9 +4,27 @@
     <div class="gh-container">
 
         <div class="gh-postfeed">
-        {{#foreach posts}}
+        {{#foreach posts limit="10"}}
 
-            {{> "card"}} {{!-- partials/card.hbs --}}
+            <article class="gh-article {{post_class}}">
+
+                <header class="gh-header gh-canvas">
+                    <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> </span>
+                    <h1 class="gh-title"><a href="{{url}}">{{title}}</a></h1>
+
+                    {{#if custom_excerpt}}
+                    <p class="gh-excerpt">{{custom_excerpt}}</p>
+                    {{/if}}
+
+                    {{#if feature_image}}
+                        <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
+                    {{/if}}
+                </header>
+
+                <div class="gh-content gh-canvas">
+                    {{content}}
+                </div>
+            </article>
 
         {{/foreach}}
         </div>

@@ -77,7 +77,7 @@
 /* ---------------------------------------------------------- */
 
 .gh-content > * + * {
-    margin-top: 4vmin;
+    margin-top: 2vmin;
 }
 
 .gh-content > [id] + * {
@@ -100,7 +100,7 @@
 .gh-canvas > p {
     font-family: var(--font-serif);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: 1.6em;
 }
 
@@ -395,3 +395,8 @@
 .gh-content tbody tr:last-child {
     border-bottom: 1px solid rgba(0,0,0,.1);
 }
+
+cite {
+   margin-top: 2vmin; 
+}
+
